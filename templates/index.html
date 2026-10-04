@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traditional OCR AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Traditional <span>OCR</span></h1>
+            <p>Pure Computer Vision Text Recognition</p>
+        </header>
+
+        <main>
+            <div class="upload-card">
+                <div class="drop-zone" id="drop-zone">
+                    <div class="drop-zone-content">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p>Drag & Drop your image here</p>
+                        <span>or</span>
+                        <button class="btn" id="browse-btn">Browse Files</button>
+                    </div>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                    <img id="image-preview" class="hidden" alt="Preview">
+                </div>
+                
+                <div class="action-area">
+                    <button id="recognize-btn" class="btn primary-btn hidden" disabled>
+                        <span>Run OCR</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                </div>
+
+                <div id="result-box" class="result-box hidden">
+                    <h3>Recognition Result:</h3>
+                    <div class="result-text" id="result-text"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
